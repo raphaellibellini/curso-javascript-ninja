@@ -58,7 +58,7 @@ multiplicar(2, 3);
 multiplicar(3, 3, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-// O resultado é 272
+// O resultado é 29
 
 /*
 Crie uma função com as seguintes características:
