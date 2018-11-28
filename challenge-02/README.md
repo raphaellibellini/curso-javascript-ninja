@@ -9,11 +9,10 @@ function soma(x, y){
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-let resultado = soma(2, 2);
-reultado + '5';
+let resultado = soma(2, 2) + 5;
 
 // Qual o valor atualizado dessa variável?
-45
+9
 
 // Declare uma nova variável, sem valor.
 let myvar;
@@ -42,11 +41,10 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function multiplicar(x, y, z){
-  if(x === null || y === null || z === null){
+  if(x === undefined || y === undefined || z === undefined){
     return 'Preencha todos os valores corretamente!'
   }else{
-    let resultado = x * y * z;
-    return resultado + '2';
+    return (x * y * z) + 2;
   }
 }
 
@@ -54,7 +52,7 @@ function multiplicar(x, y, z){
 multiplicar(2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-// "NaN2"
+// Preencha todos os valores corretamente!
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
 multiplicar(3, 3, 3);
@@ -71,8 +69,31 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function tresArgs(x, y, z){
+  if(x !== undefined && y === undefined && z === undefined){
+    return x;
+  }else if(x === undefined && y !== undefined && z === undefined){
+    return y;
+  }else if(x === undefined && y === undefined && z !== undefined){
+    return z;
+  }else if(x !== undefined && y !== undefined && z === undefined){
+    return x + y;
+  }else if(x !== undefined && y === undefined && z !== undefined){
+    return x + z;
+  }else if(x === undefined && y !== undefined && z !== undefined){
+    return y + z;
+  }else if(x !== undefined && y !== undefined && z !== undefined){
+    return (x + y) / z;
+  }else if(x === undefined && y === undefined && z === undefined){
+    return false;
+  }else{
+    return null;
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+tresArgs(); // null
+tresArgs(1); // 1
+tresArgs(1, 2); // 3
+tresArgs(1, 2, 3); // 1
 ```
