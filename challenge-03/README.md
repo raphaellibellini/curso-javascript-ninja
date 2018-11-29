@@ -25,7 +25,7 @@ altura: 1.69,
 peso: 78,
 andando: false,
 caminhouQuantosMetros: 0
-}
+};
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
@@ -160,7 +160,7 @@ pessoa.andando; //false
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-rapha.caminhouQuantosMetros; //75
+pessoa.caminhouQuantosMetros; //75
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
@@ -179,8 +179,33 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+pessoa.apresentacao = function apresentacao(){
+  let apresentacao = 'Olá, eu sou ';
+  if(pessoa.sexo === 'feminino'){
+    let apresentacaoNome = 'a ' + pessoa.nomeCompleto() + ', ';
+    apresentacao += apresentacaoNome;
+  }else{
+    let apresentacaoNome = 'o ' + pessoa.nomeCompleto() + ', ';
+    apresentacao += apresentacaoNome;
+  }
+  if(pessoa.idade === 1){
+    let apresentacaoIdade += 'tenho ' + pessoa.idade + ' ano, '; 
+    apresentacao += apresentacaoIdade;
+  }else{
+    let apresentacaoIdade += 'tenho ' + pessoa.idade + ' anos, ';
+    apresentacao += apresentacaoIdade;
+  }
+  apresentacao += pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, ';
+  if(pessoa.caminhouQuantosMetros === 1){
+    let apresentacaoCaminhei += 'só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metro!'; 
+    apresentacao += apresentacaoCaminhei;
+  }else{
+    let apresentacaoCaminhei += 'só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' metros!'; 
+    apresentacao += apresentacaoCaminhei;
+  }
+  return apresentacao;
+}
 
 // Agora, apresente-se ;)
-?
+pessoa.apresentacao();
 ```
