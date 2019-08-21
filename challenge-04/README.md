@@ -92,7 +92,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function() {
-  return `Esse carro é um ${carro.marca} ${carro.modelo}`
+  return `Esse carro é um ${carro.obterMarca} ${carro.obterModelo}`
 }
 
 /*
@@ -120,7 +120,11 @@ carro.addPessoas = function(numPessoas) {
     }
   }
   
-  if(carro.quantidadePessoas === carro.assentos) {
+  /* 
+   * Número negativo em 'numPessoas' indica que esta retirando pessoas, por isso a verificação abaixo.
+   * Só deve dizer que o carro esta lotado caso queira adicionar mais pessoas.
+   */
+  if(carro.quantidadePessoas === carro.assentos && numPessoas >= 0) {
     return 'O carro já está lotado!';
   }
   
@@ -163,11 +167,11 @@ carro.addPessoas(4); // 'Só cabem mais 3 pessoas!'
 carro.addPessoas(3); // 'Já temos 5 pessoas no carro!'
 
 // Tire 4 pessoas do carro.
-
+carro.addPessoas(-4); // 'Já temos 1 pessoas no carro!'
 
 // Adicione 10 pessoas no carro.
-?
+carro.addPessoas(10); // 'Só cabem mais 4 pessoas!'
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas // 1
 ```
