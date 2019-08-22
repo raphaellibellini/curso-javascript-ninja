@@ -82,22 +82,24 @@ os livros.
  *         }
  *     }
  * 
- *     let result = nomeLivro === undefined ? estante : estante[nomeLivro];
- *     return result;
+ *     return nomeLivro === undefined ? estante : estante[nomeLivro];
  * }
  */
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+// console.log(book());
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+/* 
+ * let nomeLivro = 'o atomo';
+ * console.log(`O livro ${nomeLivro} tem ${book(nomeLivro)['quantidadePaginas']} páginas`);
+ */
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
