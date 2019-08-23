@@ -47,10 +47,9 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 /*
  * function showTeamPosition(position) {
  *   if(position >= 0 && position <= 5){
- *       let nomeTime = teams[position - 1];
- *       console.log(`O time que está em ${position}º lugar é o ${nomeTime}.`);
+ *       return `O time que está em ${position}º lugar é o ${teams[position - 1]}.`;
  *   }else{
- *       console.log('Não temos a informação do time que está nessa posição.');
+ *       return 'Não temos a informação do time que está nessa posição.';
  *   }
  * }
  */
@@ -60,11 +59,11 @@ Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
 /*
- * showTeamPosition(1); // 'O time que está em 1º lugar é o São Paulo.'
- * showTeamPosition(2); // 'O time que está em 2º lugar é o Palmeiras.'
- * showTeamPosition(3); // 'O time que está em 3º lugar é o Corinthians.'
- * showTeamPosition(4); // 'O time que está em 4º lugar é o Santos.'
- * showTeamPosition(7); // 'Não temos a informação do time que está nessa posição.'
+ * console.log(showTeamPosition(1)); // 'O time que está em 1º lugar é o São Paulo.'
+ * console.log(showTeamPosition(2)); // 'O time que está em 2º lugar é o Palmeiras.'
+ * console.log(showTeamPosition(3)); // 'O time que está em 3º lugar é o Corinthians.'
+ * console.log(showTeamPosition(4)); // 'O time que está em 4º lugar é o Santos.'
+ * console.log(showTeamPosition(7)); // 'Não temos a informação do time que está nessa posição.'
  */
 
 /*
@@ -92,36 +91,38 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
 */
 /*
  * function convertToHex(cor){
+ *  let hexadecimal;
  *  switch(cor){
  *    case 'vermelho':
- *      console.log(`O hexadecimal para a cor ${cor} é #ff0000.`);
+ *      hexadecimal = '#ff0000';
  *      break;
  *    case 'verde':
- *      console.log(`O hexadecimal para a cor ${cor} é #008000.`);
+ *      hexadecimal = '#008000';
  *      break;
  *    case 'azul':
- *      console.log(`O hexadecimal para a cor ${cor} é #0000ff.`);
+ *      hexadecimal = '#0000ff';
  *      break;
  *    case 'amarelo':
- *      console.log(`O hexadecimal para a cor ${cor} é #ffff00.`);
+ *      hexadecimal = '#ffff00';
  *      break;
  *    case 'rosa':
- *      console.log(`O hexadecimal para a cor ${cor} é #ffcbdb.`);
+ *      hexadecimal = '#ffcbdb';
  *      break;
  *    default:
- *       console.log(`Não temos o equivalente hexadecimal para ${cor}.`);
+ *      return `Não temos o equivalente hexadecimal para ${cor}.`;
  *  }
+ *  return `O hexadecimal para a cor ${cor} é ${hexadecimal}.`;
  * }
  */
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// convertToHex('vermelho');
-// convertToHex('verde');
-// convertToHex('azul');
-// convertToHex('amarelo');
-// convertToHex('rosa');
-// convertToHex('roxo');
-// convertToHex('grey');
-// convertToHex('black');
+// console.log(convertToHex('vermelho'));
+// console.log(convertToHex('verde'));
+// console.log(convertToHex('azul'));
+// console.log(convertToHex('amarelo'));
+// console.log(convertToHex('rosa'));
+// console.log(convertToHex('roxo'));
+// console.log(convertToHex('grey'));
+// console.log(convertToHex('black'));
