@@ -62,13 +62,17 @@
   por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
   que foram passadas para a primeira função `calculator`.
   */
-  // ?
+  function calculator(x, y) {
+    return function(callback) {
+        return callback(x, y);
+    }
+  }
 
   /*
   Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
   passando dois números por parâmetro.
   */
-  // ?
+  let sum = calculator(2, 3);
 
   /*
   Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
@@ -80,14 +84,19 @@
   anônima tem como seus argumentos.
   */
   console.log( 'O resultado da soma é:' );
-  // ?
+  console.log(sum(function(x, y) {
+      return x + y;
+  }));
 
   /*
   Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
   `division` e `mod`, e atribua à elas `calculator`, passando números
   diferentes para cada chamada.
   */
-  // ?
+  let subtraction  = calculator(9, 7);
+  let multiplication = calculator(2, 2);
+  let division = calculator(4, 2);
+  let mod = calculator(5, 2);
 
   /*
   Mostre as variáveis acima no `console` (uma chamada de console por variável),
@@ -97,14 +106,22 @@
   chamada.
   */
   console.log( 'O resultado da subtração é:' );
-  // ?
+  console.log(subtraction(function(x, y) {
+    return x - y;
+  }));
 
   console.log( 'O resultado da multiplicação é:' );
-  // ?
+  console.log(multiplication(function(x, y) {
+    return x * y;
+  }));
 
   console.log( 'O resultado da divisão é:' );
-  // ?
+  console.log(division(function(x, y) {
+    return x / y;
+  }));
 
   console.log( 'O resto da divisão é:' );
-  // ?
+  console.log(mod(function(x, y) {
+    return x % y;
+  }));
 })():
