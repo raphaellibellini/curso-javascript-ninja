@@ -8,6 +8,8 @@
   usando o método visto na aula 13.
   */
   console.log( 'O array em formato de string é:' );
+  let arr = [1, 2, 3, 4];
+  console.log(arr.toString());
    
 
   /*
@@ -171,25 +173,32 @@
   - "[ESTADO] pertence ao Brasil."
   Atribua o novo array a uma variável chamada `map`.
   */
-  let newestBrasil = newBrasil.map(function(index) {
-    return index++;
+  let map = newBrasil.map(function(item) {
+    return {
+      id: item.id++,
+      estado: `${item['estado']} pertence ao Brasil`
+    }
   });
 
   /*
   Mostre no console o array criado acima:
   */
   console.log( '\nnewBrasil agora com mais informações:' );
-  // ?
+  console.log(map);
 
   /*
   Filtre o array criado acima, retornando somente os estados que tiverem
   ID par. Atribua o valor à uma variável chamada `filter`.
   */
-  // ?
-
+  
+  // Se a condição for satisfeita irá retornar o item. Ele não precisa ser retornado direto
+  let filter = map.filter(function(item) {
+      return item.id % 2 === 0;
+  });
+  
   /*
   Mostre o array filtrado acima no console.
   */
   console.log( '\nEstados com ID par:' );
-  // ?
+  console.log(filter);
 })();
