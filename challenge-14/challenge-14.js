@@ -72,6 +72,11 @@
   falada, como se você estivesse falando em código xD
   */
   console.log( '\nSeu nome na língua do "P":' );
+  let name = ['Ra', 'pha', 'e', 'lli'];
+  let nameLanguageP = name.reduce(function(acumulado, atual) {
+    return acumulado += 'p' + atual;
+  }, '');
+  console.log(nameLanguageP);
   
 
   /*
@@ -79,13 +84,16 @@
   e atribuirá o seu nome invertido (usando o array criado acima).
   */
   console.log( '\nInversed Name:' );
-  // ?
+  let inversedName = name.reduceRight(function(acumulado, atual) {
+    return acumulado + atual;
+  });
+  console.log(inversedName);
 
   /*
   Mostre no console o array `numberObjects`.
   */
   console.log( '\nNumber objects' );
-  // ?
+  console.log(numberObjects);
 
   /*
   Verifique se existem em algum índice de numberObjects um objeto ìgual a
@@ -97,19 +105,29 @@
   o que acontece ;)
   */
   console.log( '\nExiste um { number: 2 } em numberObjects?' );
-  // ?
+  if(numberObjects.indexOf({number: 2}) > -1) {
+    console.log('Existe um objeto { number: 2 } em numberObjects!');
+  }else{
+    console.log('Não existe um objeto { number: 2 } em numberObjects :(');
+  } 
+  console.log('Os objetos não serão iguais, pois não fazem referência ao mesmo objeto!');
+  console.log('Quando um objeto é criado, é criada uma referência única na memória para esse objeto');
 
   /*
   Fazendo o mesmo do exercício acima, mas começando a buscar do último índice,
   será que obtemos um resultado diferente? Faça a busca a partir do índice 2.
   */
   console.log( '\nE buscando a partir do último índice, o { number: 2 } existe?' );
-  // ?
+  if(numberObjects.lastIndexOf({number: 2}, 2) > -1) {
+    console.log('Existe um objeto { number: 2 } em numberObjects!');
+  }else{
+    console.log('Não existe um objeto { number: 2 } em numberObjects :(');
+  } 
 
   /*
   Verifique se `justMod2Or3` é um array. Se for, mostre-o no console, no
   formato de String.
   */
   console.log( '\njustMod2Or3 é um array? Se for, a representação dele em String é:' );
-  // ?
+  console.log(Array.isArray(justMod2Or3) && justMod2Or3.toString());
 })();
