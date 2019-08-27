@@ -33,7 +33,10 @@
   no console.
   */
   console.log( '\nJust module of division by 2 or 3:' );
-  // ?
+  let justMod2Or3 = justNumbers.filter(function(item) {
+    return (item % 2 === 0) || (item % 3 === 0);
+  });
+  console.log(justMod2Or3);
 
   /*
   Declare uma variável chamada operation que receba, do array criado acima,
@@ -44,7 +47,10 @@
   Mostre o resultado no console.
   */
   console.log( '\nOperation:' );
-  // ?
+  let operation = justMod2Or3.reduce(function(acumulado, atual) {
+    return (acumulado + 1) * atual;
+  }, 0);
+  console.log(operation);
 
   /*
   Faça o mesmo cálculo passado acima, mas começando do último item para o
@@ -52,7 +58,10 @@
   console.
   */
   console.log( '\nOperation 2:' );
-  // ?
+  let operation2 = justMod2Or3.reduceRight(function(acumulado, atual) {
+    return (acumulado + 1) * atual;
+  }, 0);
+  console.log(operation2);
 
   /*
   Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
@@ -63,7 +72,7 @@
   falada, como se você estivesse falando em código xD
   */
   console.log( '\nSeu nome na língua do "P":' );
-  // ?
+  
 
   /*
   Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
