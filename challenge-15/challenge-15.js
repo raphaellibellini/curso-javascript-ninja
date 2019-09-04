@@ -38,7 +38,8 @@
     }
     
     addAge() {
-      
+      this.age += arguments[0];
+      return this;
     }
   }
 
@@ -81,9 +82,9 @@
   - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
   */
   console.log( '\nNova idade das pessoas:' );
-  p1.addAge();
-  p2.addAge();
-  p3.addAge();
+  p1.addAge(2);
+  p2.addAge(3);
+  p3.addAge(5);
   console.log(`${p1.fullName} agora tem ${p1.age} anos`);
   console.log(`${p2.fullName} agora tem ${p2.age} anos`);
   console.log(`${p3.fullName} agora tem ${p3.age} anos`);
