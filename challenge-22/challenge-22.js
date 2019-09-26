@@ -2,7 +2,15 @@
   Crie dois objetos, que serão duas pessoas. Cada um deve ter as propriedades
   `name` e `lastName`, preenchidos com o nome e sobrenome da pessoa.
   */
-  // ?
+  var rapha = {
+    name: 'Raphaelli',
+    lastName: 'Bellini'
+  }
+  
+  var carol = {
+    name: 'Carolinne',
+    lastName: 'Moreira'
+  }
 
   /*
   Agora crie uma função chamada `getFullName` que retorne as propriedades
@@ -16,7 +24,12 @@
   contexto da função. Use um console.log por pessoa.
   */
   console.log( 'O nome das pessoas é:' );
-  // ?
+  function getFullName() {
+    return `${this.name} ${this.lastName}`;
+  }
+
+  console.log(getFullName.call(rapha));
+  console.log(getFullName.call(rapha));
 
   /*
   Crie uma função chamada `sum`. Essa função pode receber uma lista de
@@ -25,27 +38,35 @@
   Na primeira linha, dentro da função, deixe um console.log para mostrar todos
   os parâmetros passados para essa função.
   */
-  // ?
+  function sum() {
+    console.log(arguments);
+    return Array.prototype.reduce.call(arguments, function(total, next) {
+      return total + next;
+    })
+  }
+
 
   /*
   Mostre no console que a função acima funciona, invocando-a em 3 console.log
   diferentes, com quantidades variáveis de parâmetros passados.
   */
   console.log( '\nSomar alguns números:' );
-  // ?
+  console.log(sum(1, 2, 3, 4, 5));
+  console.log(sum(1, 4, 5));
+  console.log(sum(1, 8, 6, 4, 5));
 
   /*
   Declare uma variável chamada `userEntry`, que irá receber alguns valores
   entrados pelo usuário. Mostre para o usuário a seguinte frase:
   "Entre com alguns números que serão somados:"
   */
-  // ?
+  let userEntry = prompt('Entre com alguns números que serão somados:'); 
 
   /*
   Mostre no console o valor entrado pelo usuário:
   */
   console.log( '\nEntrada do usuário:' );
-  // ?
+  console.log(userEntry);
 
   /*
   Crie uma função chamada `justNumbers`, que recebe por parâmetro uma string
