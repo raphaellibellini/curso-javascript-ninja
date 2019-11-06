@@ -96,11 +96,6 @@
   console.log(`O mês de setembro é representado pelo número ${getMonthNumber('setembro')}.`);
   console.log(`O mês de dezembro é representado pelo número ${getMonthNumber('dezembro')}.`);
 
-    
-    let textoComBarras = text.replace(/ de /gi, '/');
-    let textoFinal = textoComBarras.replace(/janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro/g, getMonthNumber);
-  
-
   /*
   Agora, declare uma variável chamada `regexDate` que irá receber a expressão
   regular que irá fazer o match com as datas. Crie grupos de captura para o
