@@ -99,6 +99,10 @@
       if(!inputEmail.value) {
         return alert('Preencha o e-mail!');
       }
+    
+      if(isValidEmail(inputEmail.value)) {
+        return alert('Entre com um e-mail válido!');
+      }
   
       return confirm('Tem certeza que deseja enviar o formulário?') ? alert('Enviado com sucesso!') : alert('Não enviado!');
    })
@@ -129,5 +133,8 @@
       - "rita-marica@titica.a.b"
       - "agua_@evida.br.com"
   */
-  // ?
+  function isValidEmail(email) {
+    const regex =  /[\w\.\+]+?@\w+\.\w{2,}(?:\.\w{2})?/;
+    return regex.test(email);
+  }
 })();
