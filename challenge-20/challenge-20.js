@@ -91,13 +91,13 @@
       if(inputUserName.value === 'Desconhecido') {
         return alert('Preencha o nome do usuário!');
       }
-
-      if(!message.value) {
-        return alert('Preencha a mensagem!');
-      }
-      
+    
       if(!inputEmail.value) {
         return alert('Preencha o e-mail!');
+      }
+    
+      if(!message.value) {
+        return alert('Preencha a mensagem!');
       }
     
       if(isValidEmail(inputEmail.value)) {
