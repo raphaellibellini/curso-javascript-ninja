@@ -41,7 +41,7 @@
   function sum() {
     console.log(arguments);
     return Array.prototype.reduce.call(arguments, function(total, next) {
-      return total + next;
+      return Number(total) + Number(next);
     })
   }
 
@@ -74,18 +74,22 @@
   da string. Mostre a representação em string dessa função no console.
   */
   console.log( '\nFunção que limpa entrada do usuário (somente números):' );
-  // ?
+  function justNumbers(entry) {
+    let numbers = entry.match(/\d/g);
+    return numbers;
+  }
 
   /*
   Usando a função acima, faça a limpeza dos valores entrados pelo usuário,
   atribuindo o resultado à uma variável `numbers`.
   */
   console.log( '\nEntrada do usuário limpa. Somente números:' );
-  // ?
+  let numbers = justNumbers(userEntry);
+  console.log(numbers);
 
   /*
   Agora com o array de números, utilize a função `sum` para somar todos os
   números desse array e mostre o resultado no console.
   */
   console.log( '\nSomar números entrados pelo usuário:' );
-  // ?
+  console.log(sum.apply(sum, numbers));   // Por não ter um 'this' usamos o 'sum'
